@@ -1,0 +1,12 @@
+docker run ____       # vai criar um container da linguagem escolhida
+docker run -it ____      # vai criar um container da linguagem escolhida Com interação
+docker run -d ____      # vai criar um container da linguagem escolhida rodando no background
+docker run -p -d PORT ____      # permite que indiquemos uma porta = PORT para rodar a linguagem
+docker start <ID>      # podemos retornar a usar um container que ja foi utilizado antes
+docker stop NAME      # vai parar o container com o nome = NAME
+docker ps      # Mostra todos os containers sendo executados
+docker ps -a      # Mostra os containers que ja foram executados
+flag --name <NAME>      # podemos escolher o nome dos containers (sao gerados por padrao aleatoriamente)
+docker logs <ID>      # irá exibir as ultimas ações realizadas no container 
+docker -rm <ID>      # Irá remover o container (container que não estão sendo rodados)
+docker -rm -f <ID>      # Irá forçar a remoção o container (container que estão sendo rodados)
