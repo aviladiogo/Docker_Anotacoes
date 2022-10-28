@@ -1,0 +1,45 @@
+!--São originadas de arquivos que programamos para que o Docker cire uma estrutura que execute determinadas ações em containers--!
+!--Elas contém informações como: imagem base, diretório base, comandos a serem executados, porta da aplicação e etc--!
+!--ao rodar um container baseado na imagem, as intruções serão executadas em camadas--!
+Por padrão sera um arquivo Dockerfile em uma pasta do projeto
+instruções:
+FROM: imagem base;
+WORKDIR: diretório da aplicação;
+EXPOSE: porta da aplicação;
+COPY: quais arquivos precisam ser copiados;
+RUN: vai rodar um comando no terminal;
+CMD: comando que executa a aplicação;
+
+Para executar uma imagem vamos precisar fazer o build;
+instruções:
+docker build <diretório>
+
+Sempre alinhe a porta do Docker com a do programa.
+
+é possivel rodar a mesma imagem em portas diferentes em paralelo (ou imagens diferentes)
+
+podemos nomear e definir tag as imagens
+instruções:
+docker images (exibe todas)
+docker tag <ID> <NAME>:<TAG>
+assim podemos dar pull nas imagens com name especifica e tag especifica
+podemos nomealas no build
+docker build -t <NAME>:<TAG> .
+
+Remover imagem:
+docker rmi <ID>
+
+Remove todos container e imagens:
+docker system prune
+
+login / logout:
+vide curso aula 54/55
+
+enviando imagens: 
+docker push <IMG> # tem que criar o repositorio, a imagem tem que ter o mesmo nome do repositorio
+#para atualizar é so trocar a tag da imagem
+
+baixar imagem:
+docker pull <IMG> # tem que criar o repositorio, a imagem tem que ter o mesmo nome do repositorio
+(muito igual o git kk)
+

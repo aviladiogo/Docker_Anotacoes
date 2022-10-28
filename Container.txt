@@ -8,5 +8,23 @@ docker ps      # Mostra todos os containers sendo executados
 docker ps -a      # Mostra os containers que ja foram executados
 flag --name <NAME>      # podemos escolher o nome dos containers (sao gerados por padrao aleatoriamente)
 docker logs <ID>      # irá exibir as ultimas ações realizadas no container 
-docker -rm <ID>      # Irá remover o container (container que não estão sendo rodados)
-docker -rm -f <ID>      # Irá forçar a remoção o container (container que estão sendo rodados)
+docker rm <ID>      # Irá remover o container (container que não estão sendo rodados)
+docker rm -f <ID>      # Irá forçar a remoção o container (container que estão sendo rodados)
+docker rm -f $(docker ps -a -q)      #Deleta todos os containers
+
+Remover apos utilizar:
+docker run -rm <NAME>
+
+Podemos copiar arquivos entre containers
+docker cp <NAME>:<WORKDIR>/arquivo ./<onde copiar>/
+ex:
+docker cp node_diferente2:/app/app.js ./copia/
+
+podemos verificar os dados de execução de um container:
+docker top <ID>
+
+Podemos inspecionar o container
+docker inspect <>
+
+podemos verificar os processos dos container 
+docker stats
