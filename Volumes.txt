@@ -1,0 +1,29 @@
+É o meio de salvar dados nos containers
+
+Tipos:
+Anonimos(anonymous): diretórios criados pela flag -v, porem com um nome aleatorio
+Nomeados(named): são volumes com nomes, podemos nos referir a estes facilmente e saber para que sao utilizados em nosso ambiente
+bind mounts: uma forma de salvar os dados na nossa maquina sem o gerenciamento do docker, informamos um diretório para esse fim
+
+os volumes sao usados para persistir os dados dos containers:
+o container salva os dados dentro dele mesmo, pode parar e voltar e os dados estarão la, mas se criarmos outro container os dados serão perdidos
+docker volume ls
+
+anonymous:
+docker run -v /data
+
+named:
+docker run -v <name>:/<WORKDIR>
+
+Bind mount:
+a difernça para os outros é o fato de que ele fica no diretório
+docker run -v path:/<onde salvar>/pasta
+não funciona apenas para volumes, podemos utilizalo para atualizar em tempo real o projeto
+docker run -v path:/<WORKDIR>/
+
+remover volumes:
+docker volume rm <name>
+docker volume prune
+
+volume apenas de leitura: 
+adicionar apos o WORKDIR  :ro nos comandos de criação
