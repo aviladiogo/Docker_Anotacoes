@@ -1,0 +1,32 @@
+Existe 3 tipos de conexões:
+    Externa
+    Com o Host
+    Entre Containers 
+
+Tipos de redes (drivers)
+    Bridge
+    Host
+    Macvlan
+    none
+    Plugins
+
+Listar redes:
+    docker network ls
+
+Criar rede:
+    docker network create <NAME> (por padrao Bridge)
+    ou
+    docker network create -d <TIPO> <NAME>
+
+Remover rede:
+    docker network rm <NAME>
+    docker network prune
+
+conexão manual:
+    docker network connect <NAME> <Container>
+
+desconectar :
+    docker network disconnect <NAME> <Container>
+
+inspecionar:
+    docker network inspect <NAME>
