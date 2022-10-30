@@ -1,0 +1,17 @@
+é uma ferramenta para rodar múltiplos Containers
+teremos apenas um arquivo de configuração, que organiza totalmente a situação
+é uma forma de rodar multiplos builds e runs com um comando
+
+Para rodar:
+docker-compose up
+
+aceita a flag -d para rodar no background
+
+Para parar:
+docker-compose down 
+
+Variaveis de ambiente:
+.env
+muito util quando o dado for inserido nao pode ser compartilhado
+
+podemos utilizar o bind mount no compose
