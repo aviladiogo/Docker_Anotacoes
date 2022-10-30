@@ -1,0 +1,24 @@
+Yaml é uma linguagem de serializaçãp, não de marcação
+utilizada para arquivos de configuração
+
+cuidado com tab
+comentario = #
+
+True e False:
+é possivel utilizar on ou off 
+
+Arrays:
+[1,2,3,4,5]
+ou
+items:
+    - 1
+    - 2
+    - 3 
+
+Dicionarios
+obj: {a: 1, b: 2, c: 3}
+obj:
+    a: 1
+    b: 2
+    c: 3 
+é possivel colocar dicionario dentro de um dicionario
